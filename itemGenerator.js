@@ -1,3 +1,3 @@
 function newItem(){
-  print(Math.random());
+  console.log(Math.random());
 }
