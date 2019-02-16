@@ -18,7 +18,7 @@ var weaponTypes = ["Club	1 sp	1d4	Bludgeoning	2 lbs	Simple Melee Weapon	5ft.	Lig
                    "Greataxe	30 gp	1d12	Slashing	7 lbs	Martial Melee Weapon	5 ft.	Heavy, two-handed",
                    "Greatsword	50 gp	2d6	Slashing	6 lbs	Martial Melee Weapon	5 ft.	Heavy, two-handed",
                    "Halberd	20 gp	1d10	Slashing	6 lbs	Martial Melee Weapon	10 ft.	Heavy, reach, two-handed",
-                   "Lance	10 gp	1d12	Piercing	6 lbs	Martial Melee Weapon	10 ft.	Reach, You have disadvantage when you use a lance to Attack a target within 5 feet of you.", Also, a lance requires two hands to wield when you aren’t mounted"
+                   "Lance	10 gp	1d12	Piercing	6 lbs	Martial Melee Weapon	10 ft.	Reach, You have disadvantage when you use a lance to Attack a target within 5 feet of you. Also, a lance requires two hands to wield when you aren’t mounted",
                    "Longsword	15 gp	1d8	Slashing	3 lbs	Martial Melee Weapon	5 ft.	Versatile (1d10)",
                    "Maul	10 gp	2d6	Bludgeoning	10 lbs	Martial Melee Weapon	5 ft.	Heavy, two-handed",
                    "Morningstar	15 gp	1d8	Piercing	4 lbs	Martial Melee Weapon	5 ft.	",
