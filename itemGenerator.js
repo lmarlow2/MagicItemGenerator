@@ -185,5 +185,5 @@ var enchantments =["Forceful	adds 1d6 force damage",
 ];
 
 function newItem(){
-  console.log(Math.floor(Math.random() * Number.MAX_SAFE_INTEGER));
+  console.log(weaponTypes[Math.floor(Math.random() * (weaponTypes.length - 1))]);
 }
