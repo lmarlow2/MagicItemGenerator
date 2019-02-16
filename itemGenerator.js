@@ -189,6 +189,14 @@ function newItem(){
   var enchantmentInfoID = Math.floor(Math.random() * (enchantments.length - 1));
   var weapon = weaponTypes[weaponInfoID].split("\t");
   var enchantment = enchantments[enchantmentInfoID].split("\t");
-  console.log(weapon);
-  console.log(enchantment);
+  document.getElementById("weaponName").innerHTML = weapon[0];
+  document.getElementById("weaponClass").innerHTML = weapon[5];
+  document.getElementById("weaponDamage").innerHTML = weapon[2];
+  document.getElementById("weaponDamageType").innerHTML = weapon[3];
+  document.getElementById("weaponRange").innerHTML = weapon[6];
+  document.getElementById("weaponProperties").innerHTML = weapon[7];
+  document.getElementById("weaponWeight").innerHTML = weapon[4];
+  document.getElementById("weaponValue").innerHTML = weapon[1];
+  document.getElementById("enchantmentName").innerHTML = enchantment[0];
+  document.getElementById("enchantmentEffect").innerHTML = enchantment[1];
 }
