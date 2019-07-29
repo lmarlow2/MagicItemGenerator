@@ -200,3 +200,24 @@ function newItem(){
   document.getElementById("enchantmentName").innerHTML = enchantment[0];
   document.getElementById("enchantmentEffect").innerHTML = enchantment[1];
 }
+
+function copyBrew(){
+  var itemString = `___
+> ## ${document.getElementById("weaponName").innerHTML}
+>*${document.getElementById("weaponClass").innerHTML}*
+> ___
+> - **Category:** Items
+> - **Damage:** ${document.getElementById("weaponDamage").innerHTML}
+> - **Damage Type:** ${document.getElementById("weaponDamageType").innerHTML}
+> - **Range:** ${document.getElementById("weaponRange").innerHTML}
+> - **Properties:** ${document.getElementById("weaponProperties").innerHTML}
+> - **Weight:** ${document.getElementById("weaponWeight").innerHTML}.
+> - **Value:** ${document.getElementById("weaponValue").innerHTML}.
+>
+> ### Enchantment
+> ***${document.getElementById("enchantmentName").innerHTML}.*** ${document.getElementById("enchantmentEffect").innerHTML}`
+
+  itemString.select();
+  document.execCommand("copy");
+  alert("Copied text to clipboard!");
+}
