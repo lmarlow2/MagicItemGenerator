@@ -185,10 +185,10 @@ var enchantments =["Forceful	adds 1d6 force damage",
 ];
 
 function newItem(){
-  var weaponInfoID = Math.floor(Math.random() * (weaponTypes.length - 1));
-  var enchantmentInfoID = Math.floor(Math.random() * (enchantments.length - 1));
-  var weapon = weaponTypes[weaponInfoID].split("\t");
-  var enchantment = enchantments[enchantmentInfoID].split("\t");
+  let weaponInfoID = Math.floor(Math.random() * (weaponTypes.length - 1));
+  let enchantmentInfoID = Math.floor(Math.random() * (enchantments.length - 1));
+  let weapon = weaponTypes[weaponInfoID].split("\t");
+  let enchantment = enchantments[enchantmentInfoID].split("\t");
   document.getElementById("weaponName").innerHTML = weapon[0];
   document.getElementById("weaponClass").innerHTML = weapon[5];
   document.getElementById("weaponDamage").innerHTML = weapon[2];
@@ -202,7 +202,7 @@ function newItem(){
 }
 
 function copyBrew(){
-  var itemString = `___
+  let itemString = `___
 > ## ${document.getElementById("weaponName").innerHTML}
 >*${document.getElementById("weaponClass").innerHTML}*
 > ___
@@ -216,8 +216,21 @@ function copyBrew(){
 >
 > ### Enchantment
 > ***${document.getElementById("enchantmentName").innerHTML}.*** ${document.getElementById("enchantmentEffect").innerHTML}`
-
-  itemString.select();
-  document.execCommand("copy");
+  
+  /* Dumb way that javascript forces you to copy text... */
+  // Create new element
+  let tempTextArea = document.createElement('textarea');
+  // Set value (string to be copied)
+  tempTextArea.value = itemString;
+  // Set non-editable to avoid focus and move outside of view
+  tempTextArea.setAttribute('readonly', '');
+  tempTextArea.style = {position: 'absolute', left: '-9999px'};
+  document.body.appendChild(tempTextArea);
+  // Select text inside element
+  tempTextArea.select();
+  // Copy text to clipboard
+  document.execCommand('copy');
+  // Remove temporary element
+  document.body.removeChild(tempTextArea);
   alert("Copied text to clipboard!");
 }
