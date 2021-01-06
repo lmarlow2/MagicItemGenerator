@@ -184,12 +184,28 @@ var enchantments =["Forceful	adds 1d6 force damage",
                    "N/A	-"
 ];
 
+var materials =["Adamantium",
+                "Dark Iron", "Dark Steel", "Black", "Dark Wrought",
+                "Deadwood",
+                "Duranium", "Dura Steele",
+                "Katchin", "Iron Wood", "Iron Bark",
+                "Mythril",
+                "Obsidian", "Black Glass",
+                "Orichalcum",
+                "Permafrost", "Tritanium",
+                "Thorium", "Elder Stone",
+                "Wind Glass", "Cat Glass", "Sheer Sand",
+                "Xithricite", "Meteorite",
+];
+
 function newItem(){
   let weaponInfoID = Math.floor(Math.random() * (weaponTypes.length - 1));
+  let materialInfoID = Math.floor(Math.random() * (materials.length - 1));
   let enchantmentInfoID = Math.floor(Math.random() * (enchantments.length - 1));
   let weapon = weaponTypes[weaponInfoID].split("\t");
+  let material = materials[materialInfoID];
   let enchantment = enchantments[enchantmentInfoID].split("\t");
-  document.getElementById("weaponName").innerHTML = weapon[0];
+  document.getElementById("weaponName").innerHTML = material + " " + weapon[0];
   document.getElementById("weaponClass").innerHTML = weapon[5];
   document.getElementById("weaponDamage").innerHTML = weapon[2];
   document.getElementById("weaponDamageType").innerHTML = weapon[3];
