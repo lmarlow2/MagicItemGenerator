@@ -222,10 +222,10 @@ function newItem(){
   document.getElementById("weaponProperties").innerHTML = weapon[7];
   document.getElementById("weaponWeight").innerHTML = weapon[4];
   document.getElementById("weaponValue").innerHTML = weapon[1] * material.valueMultiplier;
+  document.getElementById("materialPropertyName").innerHTML = (material.hasInateEnchantment ? material.inateEnchantmentName : "");
+  document.getElementById("materialPropertyEffect").innerHTML = (material.hasInateEnchantment ? material.inateEnchantment : "");
   document.getElementById("enchantmentName").innerHTML = enchantment[0];
   document.getElementById("enchantmentEffect").innerHTML = enchantment[1];
-  //document.getElementById("materialPropertyName").innerHTML = (material.hasInateEnchantment ? material.inateEnchantmentName : "");
-  //document.getElementById("materialPropertyEffect").innerHTML = (material.hasInateEnchantment ? material.inateEnchantment : "");
 }
 
 function copyBrew(){
@@ -239,10 +239,14 @@ function copyBrew(){
 > - **Range:** ${document.getElementById("weaponRange").innerHTML}
 > - **Properties:** ${document.getElementById("weaponProperties").innerHTML}
 > - **Weight:** ${document.getElementById("weaponWeight").innerHTML}.
-> - **Value:** ${document.getElementById("weaponValue").innerHTML}.
+> - **Value:** ${document.getElementById("weaponValue").innerHTML}.`
+if(document.getElementById("materialPropertyName").innerHTML.length > 0 || document.getElementById("enchantmentName").innerHTML.length > 0){
+  itemString += `
 >
-> ### Enchantment
-> ***${document.getElementById("enchantmentName").innerHTML}.*** ${document.getElementById("enchantmentEffect").innerHTML}`
+> ### Enchantment` + (document.getElementById("materialPropertyName").innerHTML.length > 0 ? `
+> ***${document.getElementById("materialPropertyName").innerHTML}.*** ${document.getElementById("materialPropertyEffect").innerHTML}` : "") + (document.getElementById("enchantmentName").innerHTML.length > 0 ? `
+> ***${document.getElementById("enchantmentName").innerHTML}.*** ${document.getElementById("enchantmentEffect").innerHTML}` : "")
+}
   
   /* Dumb way that javascript forces you to copy text... */
   // Create new element
