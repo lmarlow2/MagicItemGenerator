@@ -8,36 +8,36 @@ var weaponTypes = ["Club	1 sp	1d4	Bludgeoning	2 lbs	Simple Melee Weapon	5ft.	Lig
                    "Quarterstaff	2 sp	1d6	Bludgeoning	4 lbs	Simple Melee Weapon	5 ft.	Versatile (1d8)",
                    "Sickle	1 gp	1d4	Slashing	2 lbs	Simple Melee Weapon	5 ft.	Light",
                    "Spear	1 gp	1d6	Piercing	3 lbs	Simple Melee Weapon	5ft.	Thrown (range 20/60), versatile (1d8)",
-                   "Light Crossbow	25 gp	1d8	Piercing	5 lbs	Simple Ranged Weapon	80/320 ft	Ammunition (crossbow bolts), loading, two-handed",
+                   "Light Crossbow	25  gp	1d8	Piercing	5 lbs	Simple Ranged Weapon	80/320 ft	Ammunition (crossbow bolts), loading, two-handed",
                    "Dart	5 cp	1d4	Piercing	1/4 lbs	Simple Ranged Weapon	20/60 ft.	Finesse, thrown",
-                   "Shortbow	25 gp	1d6	Piercing	2 lbs	Simple Ranged Weapon	80/320 ft.	Ammunition (arrows), two-handed",
+                   "Shortbow	25  gp	1d6	Piercing	2 lbs	Simple Ranged Weapon	80/320 ft.	Ammunition (arrows), two-handed",
                    "Sling	1 sp	1d4	Bludgeoning	-	Simple Ranged Weapon	30/120 ft.	Ammunition (small objects)",
-                   "Battleaxe	10 gp	1d8	Slashing	4 lbs	Martial Melee Weapon	5 ft.	Versatile (1d10)",
-                   "Flail	10 gp	1d8	Bludgeoning	2 lbs	Martial Melee Weapon	5 ft.	",
-                   "Glaive	20 gp	1d10	Slashing	6 lbs	Martial Melee Weapon	10 ft.	Heavy, reach, two-handed",
-                   "Greataxe	30 gp	1d12	Slashing	7 lbs	Martial Melee Weapon	5 ft.	Heavy, two-handed",
-                   "Greatsword	50 gp	2d6	Slashing	6 lbs	Martial Melee Weapon	5 ft.	Heavy, two-handed",
-                   "Halberd	20 gp	1d10	Slashing	6 lbs	Martial Melee Weapon	10 ft.	Heavy, reach, two-handed",
-                   "Lance	10 gp	1d12	Piercing	6 lbs	Martial Melee Weapon	10 ft.	Reach, You have disadvantage when you use a lance to Attack a target within 5 feet of you. Also, a lance requires two hands to wield when you aren’t mounted",
-                   "Longsword	15 gp	1d8	Slashing	3 lbs	Martial Melee Weapon	5 ft.	Versatile (1d10)",
-                   "Maul	10 gp	2d6	Bludgeoning	10 lbs	Martial Melee Weapon	5 ft.	Heavy, two-handed",
-                   "Morningstar	15 gp	1d8	Piercing	4 lbs	Martial Melee Weapon	5 ft.	",
+                   "Battleaxe	10  gp	1d8	Slashing	4 lbs	Martial Melee Weapon	5 ft.	Versatile (1d10)",
+                   "Flail	10  gp	1d8	Bludgeoning	2 lbs	Martial Melee Weapon	5 ft.	",
+                   "Glaive	20  gp	1d10	Slashing	6 lbs	Martial Melee Weapon	10 ft.	Heavy, reach, two-handed",
+                   "Greataxe	30  gp	1d12	Slashing	7 lbs	Martial Melee Weapon	5 ft.	Heavy, two-handed",
+                   "Greatsword	50  gp	2d6	Slashing	6 lbs	Martial Melee Weapon	5 ft.	Heavy, two-handed",
+                   "Halberd	20  gp	1d10	Slashing	6 lbs	Martial Melee Weapon	10 ft.	Heavy, reach, two-handed",
+                   "Lance	10  gp	1d12	Piercing	6 lbs	Martial Melee Weapon	10 ft.	Reach, You have disadvantage when you use a lance to Attack a target within 5 feet of you. Also, a lance requires two hands to wield when you aren’t mounted",
+                   "Longsword	15  gp	1d8	Slashing	3 lbs	Martial Melee Weapon	5 ft.	Versatile (1d10)",
+                   "Maul	10  gp	2d6	Bludgeoning	10 lbs	Martial Melee Weapon	5 ft.	Heavy, two-handed",
+                   "Morningstar	15  gp	1d8	Piercing	4 lbs	Martial Melee Weapon	5 ft.	",
                    "Pike	5 gp	1d10	Piercing	18 lbs	Martial Melee Weapon	10 ft.	Heavy, reach, two-handed",
-                   "Rapier	25 gp	1d8	Piercing	2 lbs	Martial Melee Weapon	5 ft.	Finesse",
-                   "Scimitar	25 gp	1d6	Slashing	3 lbs	Martial Melee Weapon	5 ft.	Finesse, light",
-                   "Shortsword	10 gp	1d6	Piercing	2 lbs	Martial Melee Weapon	5 ft.	Finesse, light",
+                   "Rapier	25  gp	1d8	Piercing	2 lbs	Martial Melee Weapon	5 ft.	Finesse",
+                   "Scimitar	25  gp	1d6	Slashing	3 lbs	Martial Melee Weapon	5 ft.	Finesse, light",
+                   "Shortsword	10  gp	1d6	Piercing	2 lbs	Martial Melee Weapon	5 ft.	Finesse, light",
                    "Trident	5 gp	1d6	Piercing	4 lbs	Martial Melee Weapon	5 ft.	Thrown (range 20/60), versatile (1d8)",
                    "War Pick	5 gp	1d8	Piercing	2 lbs	Martial Melee Weapon	5 ft.	",
-                   "Warhammer	15 gp	1d8	Bludgeoning	2 lbs	Martial Melee Weapon	5 ft.	Versatile (1d10)",
+                   "Warhammer	15  gp	1d8	Bludgeoning	2 lbs	Martial Melee Weapon	5 ft.	Versatile (1d10)",
                    "Whip	2 gp	1d4	Slashing	3 lbs	Martial Melee Weapon	10 ft.	Finesse, reach",
-                   "Blowgun	10 gp	1	Piercing	1 lbs	Martial Ranged Weapon	25/100 ft.	Ammunition (blowdarts), loading",
-                   "Hand Crossbow	75 gp	1d6	Piercing	3 lbs	Martial Ranged Weapon	30/120 ft.	Ammunition (crossbow bolts), light, loading",
-                   "Heavy Crossbow	50 gp	1d10	Piercing	18 lbs	Martial Ranged Weapon	100/400 ft.	Ammunition (crossbow bolts), heavy, loading, two-handed",
-                   "Longbow	50 gp	1d8	Piercing	2 lbs	Martial Ranged Weapon	150/600	Ammunition (arrows), heavy, two-handed",
+                   "Blowgun	10  gp	1	Piercing	1 lbs	Martial Ranged Weapon	25/100 ft.	Ammunition (blowdarts), loading",
+                   "Hand Crossbow	75  gp	1d6	Piercing	3 lbs	Martial Ranged Weapon	30/120 ft.	Ammunition (crossbow bolts), light, loading",
+                   "Heavy Crossbow	50  gp	1d10	Piercing	18 lbs	Martial Ranged Weapon	100/400 ft.	Ammunition (crossbow bolts), heavy, loading, two-handed",
+                   "Longbow	50  gp	1d8	Piercing	2 lbs	Martial Ranged Weapon	150/600	Ammunition (arrows), heavy, two-handed",
                    "Net	1 gp	-	-	3 lbs	Martial Ranged Weapon	5/15 ft.	Thrown, A Large or smaller creature hit by a net is Restrained until it is freed. A net has no effect on creatures that are formless, or creatures that are Huge or larger. A creature can use its action to make a DC 10 Strength check, freeing itself or another creature within its reach on a success. Dealing 5 slashing damage to the net (AC 10) also frees the creature without harming it, ending the effect and destroying the net. When you use an action, Bonus Action, or reaction to Attack with a net, you can make only one Attack regardless of the number of attacks you can normally make.",
-                   "Flintlock Pistol	50 gp	1d10	Piercing	1 lbs	Martial Ranged Weapon	60/120 ft.	Smoothbore penalty (-5 to hit), ammunition (lead shot), loading",
+                   "Flintlock Pistol	50  gp	1d10	Piercing	1 lbs	Martial Ranged Weapon	60/120 ft.	Smoothbore penalty (-5 to hit), ammunition (lead shot), loading",
                    "Flintlock Rifle	100 gp	3d4	Piercing	3 lbs	Martial Ranged Weapon	100/400 ft.	Smoothbore penalty (-2 to hit), ammunition (lead shot), loading",
-                   "Blunder Bus	75 gp	3d4	Piercing	2 lbs	Martial Ranged Weapon	15 ft.	Smoothbore penalty (-7 to hit), ammunition (small objects), loading, damages all creatures in a 15 ft. diameter cone in front of the user"
+                   "Blunder Bus	75  gp	3d4	Piercing	2 lbs	Martial Ranged Weapon	15 ft.	Smoothbore penalty (-7 to hit), ammunition (small objects), loading, damages all creatures in a 15 ft. diameter cone in front of the user"
 ];
 
 var enchantments =["Forceful	adds 1d6 force damage",
@@ -215,13 +215,13 @@ function newItem(){
   let material = materials[materialInfoID];
   let enchantment = enchantments[enchantmentInfoID].split("\t");
   document.getElementById("weaponName").innerHTML = (enchantment[0].length > 0 ? enchantment[0] + " " : "") + (material.name.length > 0 ? material.name + " " : "") + weapon[0];
-  document.getElementById("weaponClass").innerHTML = weapon[5];
-  document.getElementById("weaponDamage").innerHTML = weapon[2] + (material.addsDamage ? " + " + material.damageDice : "");
-  document.getElementById("weaponDamageType").innerHTML = weapon[3] + (material.addsDamage ? ", " + material.damageType : "");
-  document.getElementById("weaponRange").innerHTML = weapon[6];
-  document.getElementById("weaponProperties").innerHTML = weapon[7];
-  document.getElementById("weaponWeight").innerHTML = weapon[4];
-  document.getElementById("weaponValue").innerHTML = weapon[1] * material.valueMultiplier;
+  document.getElementById("weaponClass").innerHTML = weapon[6];
+  document.getElementById("weaponDamage").innerHTML = weapon[3] + (material.addsDamage ? " + " + material.damageDice : "");
+  document.getElementById("weaponDamageType").innerHTML = weapon[4] + (material.addsDamage ? ", " + material.damageType : "");
+  document.getElementById("weaponRange").innerHTML = weapon[7];
+  document.getElementById("weaponProperties").innerHTML = weapon[8];
+  document.getElementById("weaponWeight").innerHTML = weapon[5];
+  document.getElementById("weaponValue").innerHTML = (Number(weapon[1]) * material.valueMultiplier) + weapon[2];
   document.getElementById("materialPropertyName").innerHTML = (material.hasInateEnchantment ? material.inateEnchantmentName : "");
   document.getElementById("materialPropertyEffect").innerHTML = (material.hasInateEnchantment ? material.inateEnchantment : "");
   document.getElementById("enchantmentName").innerHTML = enchantment[0];
@@ -240,11 +240,15 @@ function copyBrew(){
 > - **Properties:** ${document.getElementById("weaponProperties").innerHTML}
 > - **Weight:** ${document.getElementById("weaponWeight").innerHTML}.
 > - **Value:** ${document.getElementById("weaponValue").innerHTML}.`
-if(document.getElementById("materialPropertyName").innerHTML.length > 0 || document.getElementById("enchantmentName").innerHTML.length > 0){
+
+let hasMaterialProperty = document.getElementById("materialPropertyName").innerHTML.length > 0;
+let hasEnchantmentProperty = document.getElementById("enchantmentName").innerHTML.length > 0;
+if(hasMaterialProperty || hasEnchantmentProperty){
   itemString += `
 >
-> ### Enchantment` + (document.getElementById("materialPropertyName").innerHTML.length > 0 ? `
-> ***${document.getElementById("materialPropertyName").innerHTML}.*** ${document.getElementById("materialPropertyEffect").innerHTML}` : "") + (document.getElementById("enchantmentName").innerHTML.length > 0 ? `
+> ### Enchantment` + (hasMaterialProperty ? `
+> ***${document.getElementById("materialPropertyName").innerHTML}.*** ${document.getElementById("materialPropertyEffect").innerHTML}` : "") + (hasMaterialProperty && hasEnchantmentProperty ? `
+>` : "") + (hasEnchantmentProperty ? `
 > ***${document.getElementById("enchantmentName").innerHTML}.*** ${document.getElementById("enchantmentEffect").innerHTML}` : "")
 }
   
