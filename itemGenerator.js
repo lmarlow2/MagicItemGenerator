@@ -181,7 +181,7 @@ var enchantments =["Forceful	adds 1d6 force damage",
                    "Bane (Oozes)	Does +1 damage and +2 to oozes.",
                    "Bane (Monsterous Humanoids)	Does +1 damage and +2 to monsterous humanoids.",
                    "Bane (Magical Beasts)	Does +1 damage and +2 to magical beasts.",
-                   "    "
+                   "  "
 ];
 
 var materials =[{name:"", addsDamage:false, damageDice:"", damageType:"", hasInateEnchantment:false, inateEnchantmentName:"", inateEnchantment:"", valueMultiplier:1},
@@ -214,7 +214,7 @@ function newItem(){
   let weapon = weaponTypes[weaponInfoID].split("\t");
   let material = materials[materialInfoID];
   let enchantment = enchantments[enchantmentInfoID].split("\t");
-  document.getElementById("weaponName").innerHTML = enchantment[0] + " " + material.name + weapon[0];
+  document.getElementById("weaponName").innerHTML = (enchantment[0].length > 0 ? enchantment[0] + " " : "") + (material.name.length > 0 ? material.name + " " : "") + weapon[0];
   document.getElementById("weaponClass").innerHTML = weapon[5];
   document.getElementById("weaponDamage").innerHTML = weapon[2] + (material.addsDamage ? " + " + material.damageDice : "");
   document.getElementById("weaponDamageType").innerHTML = weapon[3] + (material.addsDamage ? ", " + material.damageType : "");
