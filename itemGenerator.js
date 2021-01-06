@@ -181,21 +181,21 @@ var enchantments =["Forceful	adds 1d6 force damage",
                    "Bane (Oozes)	Does +1 damage and +2 to oozes.",
                    "Bane (Monsterous Humanoids)	Does +1 damage and +2 to monsterous humanoids.",
                    "Bane (Magical Beasts)	Does +1 damage and +2 to magical beasts.",
-                   "N/A	-"
+                   "    "
 ];
 
-var materials =["Adamantium",
-                "Dark Iron", "Dark Steel", "Black", "Dark Wrought",
-                "Deadwood",
-                "Duranium", "Dura Steele",
-                "Katchin", "Iron Wood", "Iron Bark",
-                "Mythril",
-                "Obsidian", "Black Glass",
-                "Orichalcum",
-                "Permafrost", "Tritanium",
-                "Thorium", "Elder Stone",
-                "Wind Glass", "Cat Glass", "Sheer Sand",
-                "Xithricite", "Meteorite",
+var materials =["",
+                "Adamantium ",
+                "Deadwood ",
+                "Duranium ", "Dura Steele ",
+                "Katchin ", "Iron Wood ", "Iron Bark ",
+                "Mythril ",
+                "Obsidian ", "Black Glass ",
+                "Orichalcum ",
+                "Permafrost ", "Tritanium ",
+                "Thorium ", "Elder Stone ",
+                "Wind Glass ", "Cat Glass ", "Sheer Sand ",
+                "Xithricite ", "Meteorite ",
 ];
 
 function newItem(){
@@ -205,7 +205,7 @@ function newItem(){
   let weapon = weaponTypes[weaponInfoID].split("\t");
   let material = materials[materialInfoID];
   let enchantment = enchantments[enchantmentInfoID].split("\t");
-  document.getElementById("weaponName").innerHTML = material + " " + weapon[0];
+  document.getElementById("weaponName").innerHTML = enchantment[0] + " " + material + weapon[0];
   document.getElementById("weaponClass").innerHTML = weapon[5];
   document.getElementById("weaponDamage").innerHTML = weapon[2];
   document.getElementById("weaponDamageType").innerHTML = weapon[3];
