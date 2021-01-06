@@ -221,7 +221,7 @@ function newItem(){
   document.getElementById("weaponRange").innerHTML = weapon[7];
   document.getElementById("weaponProperties").innerHTML = weapon[8];
   document.getElementById("weaponWeight").innerHTML = weapon[5];
-  document.getElementById("weaponValue").innerHTML = (Number(weapon[1]) * material.valueMultiplier) + weapon[2];
+  document.getElementById("weaponValue").innerHTML = (Number(weapon[1]) * material.valueMultiplier) + " " + weapon[2];
   document.getElementById("materialPropertyName").innerHTML = (material.hasInateEnchantment ? material.inateEnchantmentName : "");
   document.getElementById("materialPropertyEffect").innerHTML = (material.hasInateEnchantment ? material.inateEnchantment : "");
   document.getElementById("enchantmentName").innerHTML = enchantment[0];
