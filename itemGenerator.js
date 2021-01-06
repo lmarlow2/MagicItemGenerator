@@ -184,18 +184,27 @@ var enchantments =["Forceful	adds 1d6 force damage",
                    "    "
 ];
 
-var materials =["",
-                "Adamantium ",
-                "Deadwood ",
-                "Duranium ", "Dura Steele ",
-                "Katchin ", "Iron Wood ", "Iron Bark ",
-                "Mythril ",
-                "Obsidian ", "Black Glass ",
-                "Orichalcum ",
-                "Permafrost ", "Tritanium ",
-                "Thorium ", "Elder Stone ",
-                "Wind Glass ", "Cat Glass ", "Sheer Sand ",
-                "Xithricite ", "Meteorite ",
+var materials =[{name:"", addsDamage:False, damageDice:"", damageType:"", hasInateEnchantment:False, inateEnchantmentName:"", inateEnchantment:"", valueMultiplier:1},
+                {name:"Adamantium", addsDamage:True, damageDice:"1d4", damageType:"Force", hasInateEnchantment:False, inateEnchantmentName:"", inateEnchantment:"", valueMultiplier:3},
+                {name:"Deadwood", addsDamage:True, damageDice:"1d4", damageType:"Necrotic", hasInateEnchantment:False, inateEnchantmentName:"", inateEnchantment:"", valueMultiplier:3},
+                {name:"Duranium", addsDamage:False, damageDice:"", damageType:"", hasInateEnchantment:True, inateEnchantmentName:"Spell Storing", inateEnchantment:"This weapon can have a spell stored inside of it as per the rules of the Ring of Spell Storing.", valueMultiplier:10},
+                {name:"Dura Steele", addsDamage:False, damageDice:"", damageType:"", hasInateEnchantment:True, inateEnchantmentName:"Spell Storing", inateEnchantment:"This weapon can have a spell stored inside of it as per the rules of the Ring of Spell Storing.", valueMultiplier:10},
+                {name:"Katchin", addsDamage:True, damageDice:"1d4", damageType:"Poison", hasInateEnchantment:False, inateEnchantmentName:"", inateEnchantment:"", valueMultiplier:2},
+                {name:"Iron Wood", addsDamage:True, damageDice:"1d4", damageType:"Poison", hasInateEnchantment:False, inateEnchantmentName:"", inateEnchantment:"", valueMultiplier:2},
+                {name:"Iron Bark", addsDamage:True, damageDice:"1d4", damageType:"Poison", hasInateEnchantment:False, inateEnchantmentName:"", inateEnchantment:"", valueMultiplier:2},
+                {name:"Mythril", addsDamage:False, damageDice:"", damageType:"", hasInateEnchantment:True, inateEnchantmentName:"Light", inateEnchantment:"This weapon has the Light property or acts as a weapon one class size smaller. (dual wield longswords, wield greatsword with a shield, etc...)", valueMultiplier:4},
+                {name:"Obsidian", addsDamage:True, damageDice:"1d4", damageType:"Fire", hasInateEnchantment:False, inateEnchantmentName:"", inateEnchantment:"", valueMultiplier:3},
+                {name:"Black Glass", addsDamage:True, damageDice:"1d4", damageType:"Fire", hasInateEnchantment:False, inateEnchantmentName:"", inateEnchantment:"", valueMultiplier:3},
+                {name:"Orichalcum", addsDamage:False, damageDice:"", damageType:"", hasInateEnchantment:True, inateEnchantmentName:"Heavy", inateEnchantment:"Increase damage die by one class (d4 -> d6, d6 -> d8, etc...). Weapon gains the heavy property.", valueMultiplier:3},
+                {name:"Permafrost", addsDamage:True, damageDice:"1d4", damageType:"Cold", hasInateEnchantment:False, inateEnchantmentName:"", inateEnchantment:"", valueMultiplier:3},
+                {name:"Tritanium", addsDamage:True, damageDice:"1d4", damageType:"Cold", hasInateEnchantment:False, inateEnchantmentName:"", inateEnchantment:"", valueMultiplier:3},
+                {name:"Thorium", addsDamage:False, damageDice:"", damageType:"", hasInateEnchantment:True, inateEnchantmentName:"Anti-Magic", inateEnchantment:"Casts Dispel Magic on objects and creatures struck wih the weapon. Immune to magical effects such as Heat Metal, etc..", valueMultiplier:7},
+                {name:"Elder Stone", addsDamage:False, damageDice:"", damageType:"", hasInateEnchantment:True, inateEnchantmentName:"Anti-Magic", inateEnchantment:"Casts Dispel Magic on objects and creatures struck wih the weapon. Immune to magical effects such as Heat Metal, etc..", valueMultiplier:7},
+                {name:"Wind Glass", addsDamage:False, damageDice:"", damageType:"", hasInateEnchantment:True, inateEnchantmentName:"True Reflection", inateEnchantment:"Illusions do not pass through or reflect off of this weapon, making it easy to spot and see through them.", valueMultiplier:3},
+                {name:"Cat Glass", addsDamage:False, damageDice:"", damageType:"", hasInateEnchantment:True, inateEnchantmentName:"True Reflection", inateEnchantment:"Illusions do not pass through or reflect off of this weapon, making it easy to spot and see through them.", valueMultiplier:3},
+                {name:"Sheer Sand", addsDamage:False, damageDice:"", damageType:"", hasInateEnchantment:True, inateEnchantmentName:"True Reflection", inateEnchantment:"Illusions do not pass through or reflect off of this weapon, making it easy to spot and see through them.", valueMultiplier:3},
+                {name:"Xithricite", addsDamage:True, damageDice:"1d4", damageType:"Psychic", hasInateEnchantment:True, inateEnchantmentName:"Sentient", inateEnchantment:"This weapon contains a random alien (Xith/ian) personality determined by rolling on the Xith personality table. Regardless of its personality the object harbors a hatred toward both aboleths and mindflayers.", valueMultiplier:5},
+                {name:"Meteorite", addsDamage:True, damageDice:"1d4", damageType:"Psychic", hasInateEnchantment:True, inateEnchantmentName:"Sentient", inateEnchantment:"This weapon contains a random alien (Xith/ian) personality determined by rolling on the Xith personality table. Regardless of its personality the object harbors a hatred toward both aboleths and mindflayers.", valueMultiplier:5}
 ];
 
 function newItem(){
@@ -205,16 +214,18 @@ function newItem(){
   let weapon = weaponTypes[weaponInfoID].split("\t");
   let material = materials[materialInfoID];
   let enchantment = enchantments[enchantmentInfoID].split("\t");
-  document.getElementById("weaponName").innerHTML = enchantment[0] + " " + material + weapon[0];
+  document.getElementById("weaponName").innerHTML = enchantment[0] + " " + material.name + weapon[0];
   document.getElementById("weaponClass").innerHTML = weapon[5];
-  document.getElementById("weaponDamage").innerHTML = weapon[2];
-  document.getElementById("weaponDamageType").innerHTML = weapon[3];
+  document.getElementById("weaponDamage").innerHTML = weapon[2] + (material.addsDamage ? " + " + material.damageDice : "");
+  document.getElementById("weaponDamageType").innerHTML = weapon[3] + (material.addsDamage ? ", " + material.damageType : "");
   document.getElementById("weaponRange").innerHTML = weapon[6];
   document.getElementById("weaponProperties").innerHTML = weapon[7];
   document.getElementById("weaponWeight").innerHTML = weapon[4];
-  document.getElementById("weaponValue").innerHTML = weapon[1];
+  document.getElementById("weaponValue").innerHTML = weapon[1] * material.valueMultiplier;
   document.getElementById("enchantmentName").innerHTML = enchantment[0];
   document.getElementById("enchantmentEffect").innerHTML = enchantment[1];
+  //document.getElementById("materialPropertyName").innerHTML = (material.hasInateEnchantment ? material.inateEnchantmentName : "");
+  //document.getElementById("materialPropertyEffect").innerHTML = (material.hasInateEnchantment ? material.inateEnchantment : "");
 }
 
 function copyBrew(){
