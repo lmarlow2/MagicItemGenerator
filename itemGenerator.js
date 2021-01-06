@@ -209,7 +209,7 @@ var materials =[{name:"", addsDamage:False, damageDice:"", damageType:"", hasIna
 
 function newItem(){
   let weaponInfoID = Math.floor(Math.random() * (weaponTypes.length - 1));
-  let materialInfoID = Math.floor(Math.random() * (materials.length - 1));
+  let materialInfoID = Math.floor(Math.random() * (Object.keys(materials).length - 1)); //have to use a different way of getting the length of array of objects because javascript was designed by idiots
   let enchantmentInfoID = Math.floor(Math.random() * (enchantments.length - 1));
   let weapon = weaponTypes[weaponInfoID].split("\t");
   let material = materials[materialInfoID];
