@@ -11,6 +11,30 @@
   <link rel="stylesheet" href="./statBlock.css">
   <script src="./itemGenerator.js"></script>
 </head>
+<style>
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+</style>
 <body bgcolor="#000000" onload="newItem()">
 <div>
   <font color="white">Inspired by the <a href="https://homebrewery.naturalcrit.com/new" style="color:lightblue">Homebrewery.</a></font><br /><br />
@@ -19,7 +43,7 @@
 	<button onclick="print()">Print</button>
 	<button onclick="copyBrew()">Copy Homebrew</button>
   </span>
-</div><br /><br />
+	</div><br /><button type="button" class="collapsible">Build Your Own</button><div class="content"><p>Test content.</p></div><br />
   <div class="stat-block">
 	<hr class="orange-border" />
 	<div class="section-left">
@@ -77,4 +101,20 @@
 	  </div>
 	</div>
 	</div>
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
 </body>
