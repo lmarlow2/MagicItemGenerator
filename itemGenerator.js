@@ -108,8 +108,8 @@ function renderItem(){
   let enchantment = enchantments[enchantmentInfoID];
   document.getElementById("weaponName").innerHTML = (enchantment.prefix[enchantmentSubClassID].length > 0 ? enchantment.prefix[enchantmentSubClassID] + " " : "") + (materialName.length > 0 ? materialName + " " : "") + weapon[0] + (enchantment.suffix[enchantmentSubClassID].length > 0 ? " " + enchantment.suffix[enchantmentSubClassID] : "");
   document.getElementById("weaponClass").innerHTML = weapon[6];
-  document.getElementById("weaponDamage").innerHTML = weapon[3] + (material.addsDamage ? " + " + material.damageDice : "");
-  document.getElementById("weaponDamageType").innerHTML = weapon[4] + (material.addsDamage ? ", " + material.damageType : "");
+  document.getElementById("weaponDamage").innerHTML = weapon[3] + (material.addsDamage ? " + " + material.damageDice : "") + (enchantment.addsDamage[enchantmentSubClassID] ? " + " + enchantment.damageDice[enchantmentSubClassID] : "");
+  document.getElementById("weaponDamageType").innerHTML = weapon[4] + (material.addsDamage ? ", " + material.damageType : "") + (enchantment.addsDamage[enchantmentSubClassID] ? ", " + enchantment.damageType[enchantmentSubClassID] : "");
   document.getElementById("weaponRange").innerHTML = weapon[7];
   document.getElementById("weaponProperties").innerHTML = weapon[8];
   document.getElementById("weaponWeight").innerHTML = weapon[5];
@@ -119,6 +119,7 @@ function renderItem(){
   document.getElementById("enchantmentName").innerHTML = enchantment.name[enchantmentSubClassID];
   document.getElementById("enchantmentEffect").innerHTML = enchantment.effect[enchantmentSubClassID];
 }
+
 
 function newItem(){
 	randomizeItem();
