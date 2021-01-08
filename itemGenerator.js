@@ -178,14 +178,14 @@ function weaponSelected(){
 function materialSelected(){
 	let pick = document.getElementById("materialSelect").options[document.getElementById("materialSelect").selectedIndex];
   	materialInfoID = pick.dataset.major;
- 	materialSubclassID = pick.dataset.minor;
+ 	materialSubClassID = pick.dataset.minor;
 	renderItem();
 }
 
 function enchantmentSelected(){
 	let pick = document.getElementById("enchantmentSelect").options[document.getElementById("enchantmentSelect").selectedIndex];
   	enchantmentInfoID = pick.dataset.major;
- 	enchantmentSubclassID = pick.dataset.minor;
+ 	enchantmentSubClassID = pick.dataset.minor;
 	renderItem();
 }
 
