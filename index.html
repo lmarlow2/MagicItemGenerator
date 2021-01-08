@@ -46,7 +46,11 @@
 	<button onclick="print()">Print</button>
 	<button onclick="copyBrew()">Copy Homebrew</button>
   </span>
-	</div><br /><button type="button" class="collapsible">Build Your Own</button><div class="content"><p>Test content.</p></div><br />
+	</div><br /><button type="button" class="collapsible">Build Your Own</button><div class="content">
+		<select id="weaponTypeSelect" onchange="weaponSelected()"></select>
+		<select id="materialSelect" onchange="materialSelected()"></select>
+		<select id="enchantmentSelect" onchange="enchantmentSelected()"></select>
+	</div><br />
   <div class="stat-block">
 	<hr class="orange-border" />
 	<div class="section-left">
