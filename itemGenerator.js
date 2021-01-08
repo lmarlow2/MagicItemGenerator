@@ -176,14 +176,14 @@ function weaponSelected(){
 }
 
 function materialSelected(){
-	let pick = document.getElementById("materialSelect").options[document.getElementByID("materialSelect").selectedIndex];
+	let pick = document.getElementById("materialSelect").options[document.getElementById("materialSelect").selectedIndex];
   	materialInfoID = pick.value;
  	materialSubclassID = pick.id;
 	renderItem();
 }
 
 function enchantmentSelected(){
-	let pick = document.getElementById("enchantmentSelect").options[document.getElementByID("enchantmentSelect").selectedIndex];
+	let pick = document.getElementById("enchantmentSelect").options[document.getElementById("enchantmentSelect").selectedIndex];
   	enchantmentInfoID = pick.value;
  	enchantmentSubclassID = pick.id;
 	renderItem();
