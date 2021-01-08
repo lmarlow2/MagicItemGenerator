@@ -171,19 +171,19 @@ if(hasMaterialProperty || hasEnchantmentProperty){
 }
 
 function weaponSelected(){
-	weaponInfoID = document.getElementByID("weaponTypeSelect").selectedIndex;
+	weaponInfoID = document.getElementById("weaponTypeSelect").selectedIndex;
 	renderItem();
 }
 
 function materialSelected(){
-	let pick = document.getElementByID("materialSelect").options[document.getElementByID("materialSelect").selectedIndex];
+	let pick = document.getElementById("materialSelect").options[document.getElementByID("materialSelect").selectedIndex];
   	materialInfoID = pick.value;
  	materialSubclassID = pick.id;
 	renderItem();
 }
 
 function enchantmentSelected(){
-	let pick = document.getElementByID("enchantmentSelect").options[document.getElementByID("enchantmentSelect").selectedIndex];
+	let pick = document.getElementById("enchantmentSelect").options[document.getElementByID("enchantmentSelect").selectedIndex];
   	enchantmentInfoID = pick.value;
  	enchantmentSubclassID = pick.id;
 	renderItem();
@@ -213,7 +213,7 @@ function loadItemData(){
 	for(let i = 0; i < enchantments.length; ++i){
 		for(let j = 0; j < enchantments[i].name.length; ++j){
 			let option = document.createElement("option");
-			option.text = enchantments[i].names[j];
+			option.text = enchantments[i].name[j];
 			option.value = i;
 			option.id = j;
 			enchantmentSelect.add(option);
