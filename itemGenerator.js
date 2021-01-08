@@ -98,7 +98,7 @@ var enchantmentSubClassID;
 function randomizeItem(){
   weaponInfoID = Math.floor(Math.random() * weaponTypes.length);
   materialInfoID = Math.floor(Math.random() * materials.length);
-  materialSubclassID = Math.floor(Math.random() * materials[materialInfoID].names.length);
+  materialSubClassID = Math.floor(Math.random() * materials[materialInfoID].names.length);
   enchantmentInfoID = Math.floor(Math.random() * enchantments.length);
   enchantmentSubClassID = Math.floor(Math.random() * enchantments[enchantmentInfoID].name.length);
 }
