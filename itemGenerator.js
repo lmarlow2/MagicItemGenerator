@@ -177,15 +177,15 @@ function weaponSelected(){
 
 function materialSelected(){
 	let pick = document.getElementById("materialSelect").options[document.getElementById("materialSelect").selectedIndex];
-  	materialInfoID = pick.value;
- 	materialSubclassID = pick.id;
+  	materialInfoID = pick.dataset.major;
+ 	materialSubclassID = pick.dataset.minor;
 	renderItem();
 }
 
 function enchantmentSelected(){
 	let pick = document.getElementById("enchantmentSelect").options[document.getElementById("enchantmentSelect").selectedIndex];
-  	enchantmentInfoID = pick.value;
- 	enchantmentSubclassID = pick.id;
+  	enchantmentInfoID = pick.dataset.major;
+ 	enchantmentSubclassID = pick.dataset.minor;
 	renderItem();
 }
 
@@ -203,8 +203,8 @@ function loadItemData(){
 		for(let j = 0; j < materials[i].names.length; ++j){
 			let option = document.createElement("option");
 			option.text = materials[i].names[j];
-			option.value = i;
-			option.id = j;
+			option.dataset.major = i;
+			option.dataset.minor = j;
 			materialSelect.add(option);
 		}
 	}
@@ -214,8 +214,8 @@ function loadItemData(){
 		for(let j = 0; j < enchantments[i].name.length; ++j){
 			let option = document.createElement("option");
 			option.text = enchantments[i].name[j];
-			option.value = i;
-			option.id = j;
+			option.dataset.major = i;
+			option.dataset.minor = j;
 			enchantmentSelect.add(option);
 		}
 	}
