@@ -36,6 +36,7 @@
   overflow: hidden;
   background-color: #f1f1f1;
   margin: auto;
+  flex-direction: column;
 }
 </style>
 <body bgcolor="#000000" onload="newItem()">
@@ -46,7 +47,7 @@
 	<button onclick="print()">Print</button>
 	<button onclick="copyBrew()">Copy Homebrew</button>
   </span>
-	</div><br /><button type="button" class="collapsible">Build Your Own</button><div class="content" style="display:flex;flex-direction:column;margin:auto;">
+	</div><br /><button type="button" class="collapsible">Build Your Own</button><div class="content">
 		<span><label for="weaponTypeSelect">Weapon Types:</label><select id="weaponTypeSelect" onchange="weaponSelected()"></select></span>
 		<span><label for="materialSelect">Materials:</label><select id="materialSelect" onchange="materialSelected()"></select></span>
 		<span><label for="enchantmentSelect">Enchantments:</label><select id="enchantmentSelect" onchange="enchantmentSelected()"></select></span>
@@ -116,10 +117,10 @@ for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
     this.classList.toggle("active");
     var content = this.nextElementSibling;
-    if (content.style.display === "block") {
+    if (content.style.display === "flex") {
       content.style.display = "none";
     } else {
-      content.style.display = "block";
+      content.style.display = "flex";
     }
   });
 }
